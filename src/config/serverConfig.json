@@ -1,0 +1,15 @@
+{
+    "apiRes": {
+      
+    },
+    "userStatus": {
+        "Active": 1,
+        "Inactive": 0
+    },
+    "AuthMessage":{
+        "UNAUTHORIZED": "Please authenticate",
+        "AccIsNotActive": "Your Account is not active",
+        "Forbidden": "You have no permission to perferm this operation"
+    }
+  }
+  
