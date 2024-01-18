@@ -1,4 +1,4 @@
-# veddx-api
+# Animal Help
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/FiEllements/veddx/veddx-api.git
+git remote add origin https://gitlab.com/FiEllements/animal-help/animal_help_api.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/FiEllements/veddx/veddx-api/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/FiEllements/animal-help/animal_help_api/-/settings/integrations)
 
 ## Collaborate with your team
 
