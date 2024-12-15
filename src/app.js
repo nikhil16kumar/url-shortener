@@ -3,6 +3,9 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
+const authRoutes = require("./routes/authRoute");
+const urlRoutes = require("./routes/urlRoute");
+
 const app = express();
 
 // Middleware
@@ -15,5 +18,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.send("Welcome to the URL Shortener API!");
 });
+
+// Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/shorten", urlRoutes);
 
 module.exports = app;
