@@ -8,7 +8,6 @@ const urlRoutes = require("./routes/urlRoute");
 
 const app = express();
 
-// Middleware
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(bodyParser.json());

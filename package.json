@@ -4,9 +4,11 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
+    "express-useragent": "^1.0.15",
     "express-validator": "^7.2.0",
     "google-auth-library": "^9.15.0",
     "helmet": "^8.0.0",
+    "ioredis": "^5.4.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.0",
     "morgan": "^1.10.0",
@@ -16,6 +18,7 @@
     "nodemon": "^3.1.9"
   },
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   }
 }
