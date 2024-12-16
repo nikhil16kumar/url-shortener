@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   app:
     build:
@@ -6,13 +8,14 @@ services:
     ports:
       - "4001:4001"
     environment:
-      - MONGO_URI=mongodb://url-shortener_default:27017/url-shortener
+      - MONGO_URI=mongodb://mongo:27017/url-shortener
       - PORT=4001
       - BASE_URL=http://localhost:4001
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     depends_on:
       - redis
+      - mongo
     volumes:
       - .:/app
       - /app/node_modules
@@ -26,5 +29,14 @@ services:
     volumes:
       - redis-data:/data
 
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
 volumes:
   redis-data:
+  mongo-data:
