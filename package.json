@@ -13,6 +13,7 @@
     "mongoose": "^8.9.0",
     "morgan": "^1.10.0",
     "redis": "^4.7.0",
+    "supertest": "^7.0.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
@@ -21,6 +22,7 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "jest --coverage"
   }
 }

@@ -9,8 +9,8 @@ const router = express.Router();
 
 router.post("/", authMiddleware, rateLimitMiddleware, validateShortUrlRequest, urlShortenerController.shortenUrl);
 router.get("/:alias", userAgent, urlShortenerController.resolveUrl);
-router.get('/analytic/:alias', authMiddleware, urlShortenerController.getUrlAnalytics);
-router.get('/analytics/topic/:topic', authMiddleware, urlShortenerController.getTopicAnalytics);
-router.get('/analytics/overall', authMiddleware, urlShortenerController.getOverallAnalytics);
+router.get('/analytic/:alias', authMiddleware, rateLimitMiddleware, urlShortenerController.getUrlAnalytics);
+router.get('/analytics/topic/:topic', authMiddleware, rateLimitMiddleware, urlShortenerController.getTopicAnalytics);
+router.get('/analytics/overall', authMiddleware, rateLimitMiddleware, urlShortenerController.getOverallAnalytics);
 
 module.exports = router;
