@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 });
 
 // Routes
-app.use("/api/auth", authRoutes);
+app.use("/api", authRoutes);
 app.use("/api/shorten", urlRoutes);
 
 module.exports = app;
