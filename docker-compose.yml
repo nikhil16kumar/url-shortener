@@ -6,11 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "4001:4001"
+      - "4003:4003"
     environment:
-      - MONGO_URI=mongodb://mongo:27017/url-shortener
-      - PORT=4001
-      - BASE_URL=http://localhost:4001
+      - MONGO_URI=mongodb://nikhil:nikhil987@13.61.141.31:5002/url-shortener?authSource=admin&readPreference=primary&ssl=false
+      - PORT=5003
+      - BASE_URL=http://13.60.183.216:4003
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     depends_on:
@@ -33,7 +33,7 @@ services:
     image: mongo:latest
     container_name: mongo
     ports:
-      - "27017:27017"
+      - "4002:4002"
     volumes:
       - mongo-data:/data/db
 

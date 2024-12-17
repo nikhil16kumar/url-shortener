@@ -18,7 +18,7 @@ async function createShortUrl({ longUrl, customAlias, topic, userId }) {
   if (existingUrl) {
     throw new Error("Alias already in use.");
   }
-  const shortUrl = `${process.env.BASE_URL}/${alias}`;
+  const shortUrl = `${process.env.BASE_URL}/api/shorten/${alias}`;
   let newUrl = new UrlModel({
     longUrl: longUrl,
     alias: alias,
