@@ -18,7 +18,7 @@ A scalable and reusable URL shortener API built with Node.js, Express, and Mongo
 
 - Node.js >= 14.x
 - MongoDB (Database)
-- Redis (Optional, for rate limiting)
+- Redis (for caache & rate limiting)
 
 ---
 
@@ -28,3 +28,18 @@ A scalable and reusable URL shortener API built with Node.js, Express, and Mongo
    ```bash
    git clone <repository-url>
    cd url-shortener
+   npm install
+
+## Create .env file
+- Port
+- Mongo_Uri
+- GOOGLE_CLIENT_ID
+- SESSION_SECRET
+- BASE_URL
+- REDIS_HOST
+- REDIS_PORT
+  
+---
+
+## Api Documentation
+- BASE_URL/api-docs
